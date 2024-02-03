@@ -1,7 +1,9 @@
 import { MongoClient } from 'mongodb'
 
 const url = process.env.REACT_APP_MONGODB_URI;
-const options = { useNewUrlParser: true }
+const options = {
+  // useNewUrlParser: true
+}
 let connectDB
 
 if (process.env.NODE_ENV === 'development') {
