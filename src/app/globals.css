@@ -18,3 +18,8 @@
   color: grey;
   margin : 5px 0px;
 } 
+
+.list-item {
+  opacity: 1;
+  transition: all 1s;
+} 
