@@ -1,0 +1,11 @@
+import { connectDB } from "@/utils/database.js";
+import { ObjectId } from "mongodb";
+
+export default async function handler(req, res) {
+  if (req.method === 'DELETE') {
+    const db = (await connectDB).db('forum');
+    let result = await db.collection('post').deleteOne({ _id: new ObjectId(req.body) })
+    // console.log(result) // 삭제결과 출력
+    res.status(200).json('삭제완료')
+  }
+};
