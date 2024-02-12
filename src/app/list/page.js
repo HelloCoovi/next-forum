@@ -3,6 +3,8 @@ import Link from "next/link.js";
 
 import ListItem from "./ListItem.js";
 
+export const dynamic = 'force-dynamic' // force-static
+
 export default async function List() {
   const db = (await connectDB).db('forum');
   let result = await db.collection('post').find().toArray();
