@@ -31,6 +31,10 @@ export default function ListItem({ result }) {
                     console.log(error)
                   })
               }}>🗑️</button>
+
+              <button onClick={() => {
+                fetch(`/api/querystring?title=${data.title}&jabs=developer`)
+              }}>📃 querystring</button>
               <p>1월 1일</p>
               <DetailLink postID={data._id.toString()} />
             </div>
