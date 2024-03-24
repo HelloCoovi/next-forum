@@ -1,6 +1,8 @@
 import { MongoClient } from 'mongodb'
 
 const url = process.env.REACT_APP_MONGODB_URI;
+// 지정된 database에 데이터를 넣고 싶다면 ? 앞에 database 이름 추가
+// mongodb+srv://admin:adminPW@admin-cluster.srpvh8e.mongodb.net/저장할Database이름?retryWrites=true&w=majority
 const options = {
   // useNewUrlParser: true
 }

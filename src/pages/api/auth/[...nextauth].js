@@ -1,5 +1,7 @@
 import NextAuth from "next-auth"
 import GithubProvider from "next-auth/providers/github"
+import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
+import { connectDB } from '@/utils/database.js'
 
 export const authOptions = {
   providers: [
@@ -10,6 +12,7 @@ export const authOptions = {
     // 추가로 사용할 소셜로그인 추가
     //GoogleProvider... 등등
   ],
-  secret: process.env.REACT_APP_JWT_SECRET
+  secret: process.env.REACT_APP_JWT_SECRET,
+  adapter: MongoDBAdapter(connectDB),
 };
 export default NextAuth(authOptions)
