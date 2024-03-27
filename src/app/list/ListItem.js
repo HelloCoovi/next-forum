@@ -37,6 +37,7 @@ export default function ListItem({ result }) {
               }}>📃 querystring</button>
               <p>1월 1일</p>
               <DetailLink postID={data._id.toString()} />
+              <p>작성자: {data.author}</p>
             </div>
           )
         })
