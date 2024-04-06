@@ -15,7 +15,7 @@ export default async function Detail(props) {
       <h4>{result.title}</h4>
       <p>{result.content}</p>
       <Link href={`/edit/${result._id}`}>수정하기✏️</Link>
-      <Comment postId={result._id.toString()} />
+      <Comment postId={String(result._id)} />
     </div>
   )
 }
