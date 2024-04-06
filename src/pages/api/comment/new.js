@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     req.body = JSON.parse(req.body)
     let commentInfo = {
       content: req.body.comment,
-      postId: req.body.postId,
+      postId: new ObjectId(req.body.postId),
       author: session.user.email,
     }
 
